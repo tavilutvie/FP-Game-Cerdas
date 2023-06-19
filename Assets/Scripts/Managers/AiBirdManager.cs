@@ -188,6 +188,10 @@ public class AiBirdManager : Agent
 
     private void Update()
     {
+        if((int)GetCumulativeReward() > 4)
+        {
+        currentScoreText.text="Score: " + ((int)GetCumulativeReward() - 4);
+        }
         GiveScore();
     }
 
@@ -240,10 +244,10 @@ public class AiBirdManager : Agent
     {
         if (objectTag == "Obstacle")
         {  
-            currentScoreText.text="Score: " + (int)GetCumulativeReward();
-            if ((int)GetCumulativeReward() >= highScore)
+            currentScoreText.text="Score: " + ((int)GetCumulativeReward() - 4);
+            if ((int)GetCumulativeReward() - 4 >= highScore)
             {
-                highScore= (int)GetCumulativeReward();
+                highScore= (int)GetCumulativeReward() - 4;
             }
             HighScoreText.text="High Score: " + highScore;
 
@@ -257,13 +261,13 @@ public class AiBirdManager : Agent
     {
         if(gameObject.GetComponent<BehaviorParameters>().BehaviorType == BehaviorType.InferenceOnly)
         {
-            buttonName.text = "Heuristic";
+            buttonName.text = "Manual";
             gameObject.GetComponent<BehaviorParameters>().BehaviorType = BehaviorType.HeuristicOnly;
             velocity = 5;
         }
         else if(gameObject.GetComponent<BehaviorParameters>().BehaviorType == BehaviorType.HeuristicOnly)
         {
-            buttonName.text = "Inference";
+            buttonName.text = "AI";
             gameObject.GetComponent<BehaviorParameters>().BehaviorType = BehaviorType.InferenceOnly;
             velocity = 2.5f;
         }

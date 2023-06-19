@@ -227,7 +227,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -517,7 +517,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Inference
+  m_Text: AI
 --- !u!222 &1673285548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -850,6 +850,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 51639e42099a66440bd72a8763408032, type: 3}
+    - target: {fileID: 3914635236997776511, guid: eb008835cf9e9fe4a942cefc28ece71e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914635236997776511, guid: eb008835cf9e9fe4a942cefc28ece71e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914635236997776511, guid: eb008835cf9e9fe4a942cefc28ece71e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3914635237301198577, guid: eb008835cf9e9fe4a942cefc28ece71e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
